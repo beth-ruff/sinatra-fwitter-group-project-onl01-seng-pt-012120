@@ -1,7 +1,10 @@
-<p>Welcome, </p>
+<h2>Welcome, <%= @user.username %></h2>
 
-<% Tweet.all.each do |tweet| %>
-  <div class="tweets">
-    <p><%= @tweet.content %></p>
-  </div><br>
-<% end %>
+<h3>All Tweets</h3>
+<ul>
+  <% Tweet.all.each do |tweet| %>
+    <li>
+      <%= tweet.content %>
+    </li>
+  <% end %>
+</ul>
